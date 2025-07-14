@@ -28,7 +28,7 @@ const LeaderboardView = ({
     const fetchUsers = async () => {
       try {
         const res = await fetch(
-          "https://leaderboard-api-abc123.onrender.com/api/users"
+          "https://leaderboard-app-yd8v.onrender.com/api/users"
         );
         const data = await res.json();
         setUsers(data);

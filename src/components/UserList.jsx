@@ -9,8 +9,7 @@ const UserList = ({ selectedUserId, setSelectedUserId, refresh }) => {
     // Fetch users from backend and sort them by points
     const fetchUsers = async () => {
       try {
-        const res = await fetch(
-          "https://leaderboard-api-abc123.onrender.com/api/users"
+        const res = await  fetch("https://leaderboard-app-yd8v.onrender.com/api/users", 
         );
         const data = await res.json();
         const sorted = data.sort((a, b) => b.totalPoints - a.totalPoints);

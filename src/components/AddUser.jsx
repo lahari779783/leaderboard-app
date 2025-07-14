@@ -13,13 +13,16 @@ const AddUser = ({ onUserAdded }) => {
     setIsSubmitting(true);
     try {
       // API call to add a new user
-      const res = await fetch("https://leaderboard-api-abc123.onrender.com/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name }),
-      });
+      const res = await fetch(
+        "https://leaderboard-app-yd8v.onrender.com/api/users",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name }),
+        }
+      );
 
       if (!res.ok) throw new Error("Failed to add user");
 

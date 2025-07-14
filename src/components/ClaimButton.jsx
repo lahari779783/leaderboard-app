@@ -8,7 +8,7 @@ const ClaimButton = ({ selectedUserId, onClaimed }) => {
 
     try {
       const res = await fetch(
-        "https://leaderboard-api-abc123.onrender.com/api/claim",
+        "https://leaderboard-app-yd8v.onrender.com/api/claim",
         {
           method: "POST",
           headers: {
