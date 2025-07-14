@@ -13,7 +13,7 @@ const AddUser = ({ onUserAdded }) => {
     setIsSubmitting(true);
     try {
       // API call to add a new user
-      const res = await fetch("http://localhost:5000/api/users", {
+      const res = await fetch("https://leaderboard-api-abc123.onrender.com/api/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

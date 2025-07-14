@@ -27,7 +27,9 @@ const LeaderboardView = ({
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/users");
+        const res = await fetch(
+          "https://leaderboard-api-abc123.onrender.com/api/users"
+        );
         const data = await res.json();
         setUsers(data);
       } catch (err) {

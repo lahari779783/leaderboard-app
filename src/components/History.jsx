@@ -6,7 +6,9 @@ const History = ({ refresh, setShowHistory }) => {
   // Fetch claim history from the server
   const fetchHistory = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/history");
+      const res = await fetch(
+        "https://leaderboard-api-abc123.onrender.com/api/history"
+      );
       const data = await res.json();
       setHistory(data);
     } catch (err) {
@@ -22,7 +24,7 @@ const History = ({ refresh, setShowHistory }) => {
     if (!confirmClear) return;
 
     try {
-      await fetch("http://localhost:5000/api/history", {
+      await fetch("https://leaderboard-api-abc123.onrender.com/api/history", {
         method: "DELETE",
       });
       setHistory([]); // Clear UI after DB is cleared

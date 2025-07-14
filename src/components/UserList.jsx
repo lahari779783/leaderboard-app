@@ -9,7 +9,9 @@ const UserList = ({ selectedUserId, setSelectedUserId, refresh }) => {
     // Fetch users from backend and sort them by points
     const fetchUsers = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/users");
+        const res = await fetch(
+          "https://leaderboard-api-abc123.onrender.com/api/users"
+        );
         const data = await res.json();
         const sorted = data.sort((a, b) => b.totalPoints - a.totalPoints);
         setUsers(sorted);
@@ -39,24 +41,6 @@ const UserList = ({ selectedUserId, setSelectedUserId, refresh }) => {
             </option>
           ))}
         </select>
-
-        {/* ❌ Note: This button shouldn’t be here if you’re using separate ClaimButton component.
-            Either remove this or make sure it works with `handleClaim` function. */}
-        {/* <button
-          onClick={handleClaim}
-          className="btn-green"
-          style={{
-            padding: "10px 20px",
-            fontSize: "16px",
-            borderRadius: "6px",
-            backgroundColor: "#007bff",
-            color: "#fff",
-            border: "none",
-            cursor: "pointer",
-          }}
-        >
-          Claim Points
-        </button> */}
       </div>
 
       {/* Animated Leaderboard List */}
